@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+// libraries
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+
+// styles
 import './App.css';
+import Navbar from './Navbar';
+
+// pages
+import Home from './Home';
+import StateTutorial from './useState/StateTutorial';
+import { ReducerTutorial } from './useReducer/ReducerTutorial';
+import MemoTutorial from './useMemo/MemoTutorial';
+import EffectTutorial from './useEffect/EffectTutorial';
+import { ReffTutorial } from './useRef/ReffTutorial';
+import CallbackTutorial from './useCallback/CallbackTutorial';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div className='navigation'>
+          <Navbar/>
+        </div>
+
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/useState' element={<StateTutorial/>}/>
+          <Route path='/useEffect' element={<EffectTutorial/>}/>
+          <Route path='/useContext' element={<Home/>}/>
+          <Route path='/useCallback' element={<CallbackTutorial/>}/>
+          <Route path='useImperativeHandle/' element={<Home/>}/>
+          <Route path='/useLayout' element={<Home/>}/>
+          <Route path='/useMemo' element={<MemoTutorial/>}/>
+          <Route path='/useReducer' element={<ReducerTutorial/>}/>
+          <Route path='/useRef' element={<ReffTutorial/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }

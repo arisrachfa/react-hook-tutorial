@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.navigation {
+  background: aqua;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation a {
+  padding: 10px 40px;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  background: orange;
+  border-radius: 4px;
+}
+
+.mainPage {
+  padding: 20px;
+  text-align: left;
+}
+
+.mainPage li {
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 400;
+}
+
+.mainPage li a {
+  text-decoration: none;
+  color: black;
+}
