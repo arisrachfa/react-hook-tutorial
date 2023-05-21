@@ -14,6 +14,7 @@ import MemoTutorial from './useMemo/MemoTutorial';
 import EffectTutorial from './useEffect/EffectTutorial';
 import { ReffTutorial } from './useRef/ReffTutorial';
 import CallbackTutorial from './useCallback/CallbackTutorial';
+import ContextTutorial from './useContext/ContextTutorial';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/useState' element={<StateTutorial/>}/>
           <Route path='/useEffect' element={<EffectTutorial/>}/>
-          <Route path='/useContext' element={<Home/>}/>
+          <Route path='/useContext' element={<ContextTutorial/>}/>
           <Route path='/useCallback' element={<CallbackTutorial/>}/>
           <Route path='useImperativeHandle/' element={<Home/>}/>
           <Route path='/useLayout' element={<Home/>}/>
